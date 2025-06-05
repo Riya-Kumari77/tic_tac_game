@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+    font-family: 'Fredoka One', cursive;
+    background: linear-gradient(to right, #fceabb, #f8b500);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+h1 {
+    font-size: 48px;
+    color: #ff4d6d;
+    text-shadow: 2px 2px #fff;
+}
+
+#game {
+    background-color: #fff3cd;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 15px;
+    position: relative;
+}
+
+.cell {
+    background-color: #ffecd1;
+    border-radius: 15px;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+    background-color: #ffe3b3;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #1e90ff;
+    text-shadow: 2px 2px #fff;
+}
+
+.cell.o {
+    color: #ff1493;
+    text-shadow: 2px 2px #fff;
+}
+
+#message {
+    font-size: 24px;
+    margin: 20px 0;
+    color: #4b0082;
+}
+
+#resetBtn {
+    padding: 12px 25px;
+    font-size: 18px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+#resetBtn:hover {
+    background-color: #388e3c;
+}
+
+.win-line {
+    position: absolute;
+    height: 6px;
+    background-color: #e91e63;
+    width: 0;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: all 0.4s ease;
+    z-index: 2;
+    border-radius: 4px;
+}
